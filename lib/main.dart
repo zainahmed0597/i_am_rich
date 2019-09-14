@@ -12,20 +12,33 @@ void main() {
           title: Text('I Am Rich'),
           backgroundColor: Colors.blueGrey[900],
         ),
-        body: Column(
-          children: <Widget>[
-            Center(
-              child: Image(
-                image: AssetImage('images/diamond.png'),
-              ),
+        body: Container(
+          color: Colors.tealAccent,
+          child: Center(
+            child: Row(
+              children: <Widget>[
+                Container(
+                  height: 100.0,
+                  width: 200.0,
+                  child: Center(
+                    child: Image(
+                      image: AssetImage('images/diamond.png'),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 100.0,
+                  width: 200.0,
+                  child: Center(
+                    child: Image(
+                      image: NetworkImage(
+                          'https://www.w3schools.com/w3css/img_lights.jpg'),
+                    ),
+                  ),
+                ),
+              ],
             ),
-
-            Center(
-              child: Image(
-                image: NetworkImage('https://www.w3schools.com/w3css/img_lights.jpg'),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     ),
